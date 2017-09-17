@@ -32,8 +32,15 @@ use yii\helpers\Url;
             <td><?= $item->id ?></td>
             <td><?= $item->title ?></td>
             <td>
-                <a href="<?= Url::to(['site/update', 'id' => $item->id]) ?>" class="btn btn-success">Update</a>
-                <a href="<?= Url::to(['site/delete', 'id' => $item->id]) ?>" class="btn btn-danger">Delete</a>
+                <a href="<?= Url::to(['record', 'id' => $item->id]) ?>">
+                    <i class="glyphicon glyphicon-eye-open"></i>
+                </a>
+                <a href="<?= Url::to(['site/update', 'id' => $item->id]) ?>">
+                    <i class="glyphicon glyphicon-edit"></i>
+                </a>
+                <a href="<?= Url::to(['site/delete', 'id' => $item->id]) ?>">
+                    <i class="glyphicon glyphicon-remove"></i>
+                </a>
             </td>
         </tr>
     <?php endforeach; ?>

@@ -41,3 +41,7 @@ body {
     text-decoration: underline;
     color: #6B6B6B !important ;
 }
+
+#login-form > div.form-group.field-signup-password > label {
+    padding-left: 0px !important;
+}

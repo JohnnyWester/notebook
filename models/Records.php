@@ -46,5 +46,4 @@ class Records extends ActiveRecord {
         $data = Records::find()->where(['id' => $id])->one();
         return $data;
     }
-
 }

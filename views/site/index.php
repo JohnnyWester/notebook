@@ -9,12 +9,12 @@ $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="site-index">
     <table class="table table-bordered table-hover">
-        <thead class="inverse">
+        <thead class="table-inverse">
         <tr>
-            <th>#</th>
-            <th>Title</th>
-            <th>Author</th>
-            <th>Date</th>
+            <th class="tableHead">#</th>
+            <th class="tableHead">Title</th>
+            <th class="tableHead">Author</th>
+            <th class="tableHead">Date</th>
         </tr>
         </thead>
         <tbody>

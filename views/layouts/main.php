@@ -40,7 +40,25 @@ AppAsset::register($this);
             ['label' => 'All records', 'url' => ['/site/index']],
             ['label' => 'Create records', 'url' => ['/site/add']],
             ['label' => 'Editing records', 'url' => ['/site/crud']],
-        ]
+            ['label' => '||'],
+            Yii::$app->user->isGuest ? (
+            ['label' => 'Login', 'url' => ['/auth/login']]
+            ) : (
+                '<li>'
+                . Html::beginForm(['/auth/logout'], 'post')
+                . Html::submitButton(
+                    'Logout (' . Yii::$app->user->identity->name . ')',
+                    ['class' => 'btn btn-link logout']
+                )
+                . Html::endForm()
+                . '</li>'
+            ),
+            Yii::$app->user->isGuest ? (
+            ['label' => 'Sign Up', 'url' => ['/auth/sign-up']]
+            ) : (
+                '<li style="display: none">'.'</li>'
+            )
+        ],
     ]);
     NavBar::end();
     ?>
